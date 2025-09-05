@@ -1,0 +1,209 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Surya Prakash A - Portfolio</title>  
+  <style>  
+    /* ---------- General Reset ---------- */  
+    * {  
+      margin: 0;  
+      padding: 0;  
+      box-sizing: border-box;  
+    }  
+
+    body {  
+      font-family: 'Arial', sans-serif;  
+      color: #fff;  
+      scroll-behavior: smooth;  
+      animation: bgSlide 15s infinite linear;  
+      background: linear-gradient(270deg, #ff7eb3, #65d6ce, #6a82fb, #fc5c7d);  
+      background-size: 800% 800%;  
+    }  
+
+    @keyframes bgSlide {  
+      0% { background-position: 0% 50%; }  
+      50% { background-position: 100% 50%; }  
+      100% { background-position: 0% 50%; }  
+    }  
+
+    header {  
+      text-align: center;  
+      padding: 50px 20px;  
+      animation: fadeInDown 2s ease;  
+    }  
+
+    header img.profile {  
+      border-radius: 50%;  
+      margin-bottom: 15px;  
+      border: 4px solid #fff;  
+      width: 120px;  
+      height: 120px;  
+      animation: bounceIn 2s ease;  
+    }  
+
+    header h1 {  
+      font-size: 2.5rem;  
+    }  
+
+    header p {  
+      font-size: 1.2rem;  
+      opacity: 0.9;  
+    }  
+
+    nav {  
+      background: rgba(0,0,0,0.6);  
+      display: flex;  
+      justify-content: center;  
+      padding: 15px;  
+      position: sticky;  
+      top: 0;  
+      z-index: 1000;  
+    }  
+
+    nav a {  
+      color: #fff;  
+      text-decoration: none;  
+      margin: 0 20px;  
+      font-weight: bold;  
+      transition: color 0.3s;  
+    }  
+
+    nav a:hover {  
+      color: black;  
+    }  
+
+    section {  
+      padding: 80px 20px;  
+      max-width: 800px;  
+      margin: auto;  
+      text-align: center;  
+      opacity: 0;  
+      transform: translateY(50px);  
+      transition: all 1s ease-out;  
+    }  
+
+    section.show {  
+      opacity: 1;  
+      transform: translateY(0);  
+    }  
+
+    section h2 {  
+      font-size: 2rem;  
+      margin-bottom: 20px;  
+      color: #ffeb3b;  
+    }  
+
+    ul {  
+      list-style-type: none;  
+      font-size: 1.1rem;  
+    }  
+
+    ul li {  
+      margin: 10px 0;  
+    }  
+
+    /* ---------- Animations ---------- */  
+    @keyframes fadeInDown {  
+      from { opacity: 0; transform: translateY(-50px); }  
+      to { opacity: 1; transform: translateY(0); }  
+    }  
+
+    @keyframes bounceIn {  
+      0% { transform: scale(0.5); opacity: 0; }  
+      60% { transform: scale(1.2); opacity: 1; }  
+      100% { transform: scale(1); }  
+    }  
+
+    /* Contact styling */  
+    .contact-info p {  
+      font-size: 1.1rem;  
+      margin: 8px 0;  
+    }  
+  </style>  
+</head>  
+<body>  
+  <header>  
+    <img src="surya.jpg" alt="Profile Photo" class="profile">  
+    <h1>Surya Prakash A</h1>  
+    <p>B.Sc Computer Science | Web Developer</p>  
+  </header>  
+
+  <nav>  
+    <a href="#about">About</a>  
+    <a href="#education">Education</a>  
+    <a href="#skills">Skills</a>  
+    <a href="#projects">Projects</a>  
+    <a href="#certificates">Certificates</a>  
+    <a href="#contact">Contact</a>  
+  </nav>  
+
+  <section id="about">  
+    <h2>About Me</h2>  
+    <p>I am a Computer Science graduate with a strong interest in programming and databases.</p>  
+  </section>  
+
+  <section id="education">  
+    <h2>Education</h2>  
+    <ul>  
+      <li>SSLC, HSC, B.Sc. COMPUTER SCIENCE</li>  
+    </ul>  
+  </section>  
+
+  <section id="skills">  
+    <h2>Skills</h2>  
+    <ul>  
+      <li>C</li>  
+      <li>C++</li>  
+      <li>Python</li>  
+    </ul>  
+  </section>  
+
+  <section id="projects">  
+    <h2>Projects</h2>  
+    <ul>  
+      <li><strong>Student Management System:</strong> A system developed in C++ with database integration.</li>  
+      <li><strong>Portfolio Website:</strong> My personal responsive portfolio website.</li>  
+    </ul>  
+  </section>  
+
+  <!-- Certificates Section -->  
+  <section id="certificates">  
+    <h2>Certificates</h2>  
+    <ul>  
+      <li><a href="s.jpg" target="_blank"><strong>Python Programming Certification</strong> – Coursera</a></li>  
+      <li><a href="u.jpg" target="_blank"><strong>Web Development Bootcamp</strong> – Udemy</a></li> 
+<!-- Resume Section -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <p>You can view or download my resume below:</p>
+    <a href="r.jpg" download class="resume-btn">📄 Download Resume</a>
+  </section>  
+  <!-- Contact Section -->  
+  <section id="contact">  
+    <h2>Contact</h2>  
+    <div class="contact-info">  
+      <p><strong>Email:</strong> surya22pragash@gmail.com</p>  
+      <p><strong>Phone:</strong> +91 9677487243</p>  
+      <p><strong>Address:</strong> 6/105 Periyakannur, Avinashi, Tiruppur, 641-654</p>  
+    </div>  
+  </section>  
+
+  <script>  
+    // Scroll reveal animation  
+    const sections = document.querySelectorAll("section");  
+    const reveal = () => {  
+      const trigger = window.innerHeight - 100;  
+      sections.forEach(sec => {  
+        const top = sec.getBoundingClientRect().top;  
+        if (top < trigger) {  
+          sec.classList.add("show");  
+        }  
+      });  
+    };  
+    window.addEventListener("scroll", reveal);  
+    reveal(); // Initial check  
+  </script>  
+</body>  
+</html>
+      
